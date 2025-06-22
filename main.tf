@@ -1,8 +1,6 @@
-provider "aws" {
-    region = "us-east-1"  # Set your desired AWS region
-}
-
-resource "aws_instance" "example" {
-    ami           = "ami-0c55b159cbfafe1f0"  # Specify an appropriate AMI ID
-    instance_type = "t2.micro"
+//--------------------------------------------------------------------
+// Modules
+module "ec2_instance" {
+  source  = "app.terraform.io/Nirmalyuvi12/ec2-instance/aws"
+  version = "1.0.0"
 }
